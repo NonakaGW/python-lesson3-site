@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#b91f27" />
+  <meta name="description" content="中学生向けPythonプログラミング 第3回『条件によって動きを変えよう』の授業スライドをオンラインで閲覧できます。" />
+  <title>プログラミング 第3回｜授業スライド</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="assets/slide-data.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#viewer">スライドに移動</a>
+  <header class="site-header">
+    <div class="header-inner page-width">
+      <a class="brand" href="./" aria-label="第3回スライド トップに戻る">
+        <span class="brand-mark" aria-hidden="true">Py<span class="brand-dot">.</span></span>
+        <span class="brand-name">Python プログラミング<span class="brand-sub">中学生向け授業資料</span></span>
+      </a>
+      <div class="header-side"><span class="lesson-tag">LESSON 03</span><a href="assets/lesson3.pdf" class="header-pdf" target="_blank" rel="noopener">PDFで開く <span aria-hidden="true">↗</span></a></div>
+    </div>
+  </header>
+
+  <main class="page-width">
+    <section class="intro" aria-labelledby="lesson-title">
+      <div class="intro-copy">
+        <div class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> PROGRAMMING CLASS · 第3回</div>
+        <h1 id="lesson-title">条件によって<span class="no-wrap">動きを変えよう！</span></h1>
+        <p class="intro-desc">Pythonの <code>if</code>・<code>elif</code>・<code>else</code> と <code>random</code> を学び、ランダムおみくじを作ります。</p>
+      </div>
+      <div class="intro-summary" aria-label="資料の概要">
+        <span class="summary-icon" aria-hidden="true">▤</span>
+        <div><strong>授業スライド</strong><span>全37枚・いつでも閲覧OK</span></div>
+      </div>
+    </section>
+
+    <div class="reader-section" id="viewer">
+      <div class="reader-heading">
+        <div class="reader-heading-left"><span class="section-label">SLIDE VIEWER</span><h2>授業資料を見る</h2></div>
+        <div class="reader-actions">
+          <button class="icon-action" type="button" id="toggleThumbnails" aria-expanded="false" aria-controls="thumbnailPanel"><span class="action-icon" aria-hidden="true">▦</span> 一覧表示</button>
+          <a class="icon-action pdf-action" href="assets/lesson3.pdf" target="_blank" rel="noopener"><span class="action-icon" aria-hidden="true">↗</span> PDFで開く</a>
+        </div>
+      </div>
+      <div class="reader-layout">
+        <section class="viewer-panel" aria-label="スライド表示">
+          <div class="slide-info">
+            <div><span class="slide-unit" id="currentChapter">イントロダクション</span><h3 id="currentSlideTitle">プログラミング 第3回</h3></div>
+            <div class="slide-index"><strong id="currentNumber">01</strong><span aria-hidden="true"> / </span><span id="totalNumber">37</span></div>
+          </div>
+          <div class="slide-stage" id="slideStage">
+            <img id="slideImage" src="assets/slides/slide-01.webp" alt="スライド1：プログラミング 第3回" width="1920" height="1080" decoding="async" fetchpriority="high" />
+            <button class="zoom-button" type="button" id="openZoom" aria-label="スライドを大きく表示する"><span aria-hidden="true">⤢</span> 拡大</button>
+          </div>
+          <div class="progress" role="progressbar" id="slideProgress" aria-label="スライド進捗" aria-valuemin="1" aria-valuemax="37" aria-valuenow="1"><div id="progressFill" class="progress-fill"></div></div>
+          <div class="slide-controls">
+            <button class="nav-button prev" id="prevSlide" type="button"><span class="nav-arrow" aria-hidden="true">←</span> 前のスライド</button>
+            <span class="page-indicator" id="pageIndicator" aria-live="polite">1 / 37</span>
+            <button class="nav-button next" id="nextSlide" type="button">次のスライド <span class="nav-arrow" aria-hidden="true">→</span></button>
+          </div>
+          <p class="viewer-help">左右のボタンでページを切り替えられます。iPadでは左右にスワイプしても操作できます。</p>
+        </section>
+
+        <aside class="chapter-panel" aria-labelledby="chapterTitle">
+          <div class="chapter-top"><div><span class="section-label">CONTENTS</span><h3 id="chapterTitle">目次から移動</h3></div><span class="chapter-count">6 CHAPTERS</span></div>
+          <nav class="chapter-list" id="chapterList" aria-label="章の目次"></nav>
+          <div class="chapter-note"><span aria-hidden="true">✦</span><p>自分のペースで、好きなページから復習できます。</p></div>
+        </aside>
+      </div>
+    </div>
+
+    <section class="thumbnail-panel" id="thumbnailPanel" hidden aria-labelledby="thumbnailTitle">
+      <div class="thumbnail-heading"><div><span class="section-label">ALL SLIDES</span><h2 id="thumbnailTitle">スライド一覧</h2></div><button type="button" class="icon-action" id="closeThumbnails">一覧を閉じる ×</button></div>
+      <p class="thumbnail-desc">見たいスライドをタップすると、そのページに移動します。</p>
+      <div class="thumb-grid" id="thumbnailGrid"></div>
+    </section>
+
+    <section class="guide" aria-labelledby="guideTitle">
+      <div class="guide-icon" aria-hidden="true">?</div>
+      <div class="guide-copy"><h2 id="guideTitle">資料の見方</h2><p>授業中はもちろん、あとからの復習にも使えます。コードを書くときは、スライドを見ながら Tech Nexus で実行してみましょう。</p></div>
+      <a href="assets/lesson3.pdf" target="_blank" rel="noopener" class="guide-link">PDFを開く <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="page-width footer-inner"><span>Python プログラミング · 第3回</span><span>授業スライド閲覧用サイト</span></div></footer>
+
+  <dialog id="lightbox" class="lightbox" aria-label="スライド拡大表示">
+    <div class="lightbox-shell">
+      <div class="lightbox-header"><span id="zoomCaption">スライド 1 / 37</span><button id="closeZoom" class="lightbox-close" type="button" aria-label="拡大表示を閉じる">× <span>閉じる</span></button></div>
+      <div class="lightbox-image-wrap"><img id="zoomImage" src="assets/slides/slide-01.webp" alt="拡大した授業スライド" width="1920" height="1080" /></div>
+      <div class="lightbox-controls"><button id="zoomPrev" type="button">← 前へ</button><span>左右にスワイプできます</span><button id="zoomNext" type="button">次へ →</button></div>
+    </div>
+  </dialog>
+</body>
+</html>
